@@ -6,7 +6,7 @@ var options = {
   replset: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } }
 };
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/warbler', options);
+mongoose.connect('mongodb://admin:warblerdem19@ds227199.mlab.com:27199/warbler', options);
 
 module.exports.User = require('./user');
 module.exports.Message = require('./message');
